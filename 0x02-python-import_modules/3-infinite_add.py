@@ -7,4 +7,4 @@ if __name__ == "__main__":
             continue
         else:
             res += int(sys.argv[str])
-    print("{}".format(res))
+    print("{:d}".format(res))
