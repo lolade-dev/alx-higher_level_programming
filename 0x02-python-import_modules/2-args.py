@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    from sys import argv
-    nargs = len(argv)
-    if (nargs == 0):
-        print("{:d} arguments.".format(nargs))
-    elif (nargs == 1):
-        print("{:d} argument:".format(nargs))
+from sys import argv
+
+
+def principal():
+    print('{} argument'.format(len(argv) - 1), end='')
+    if len(argv) == 1:
+        print('s.')
+    elif len(argv) == 2:
+        print(':')
     else:
-        print("{:d} arguments:".format(nargs))
-        
-    for i, s in enumerate(argv):
-        if i > 0:
-            print("{:d}: {:s}".format(i, s))
+        print('s:')
+    for i in range(1, len(argv)):
+        print('{}: {}'.format(i, argv[i]))
+
+
+if __name__ == "__main__":
+    principal()
