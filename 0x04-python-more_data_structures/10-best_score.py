@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-def best_score(my_dict):
-    if my_dict and len(my_dict):
-        max = list(my_dict.keys())[0]
-        for key in my_dict:
-            if my_dict[key] > my_dict[max]:
-                max = key
-        return max
-    return None
+def best_score(a_dictionary):
+    if (a_dictionary == {} or a_dictionary is None):
+        return (None)
+    else:
+        max_value = max(a_dictionary, key=a_dictionary.get)
+        return (max_value)
